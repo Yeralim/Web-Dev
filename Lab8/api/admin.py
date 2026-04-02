@@ -1,3 +1,4 @@
+""""
 from django.contrib import admin
 from .models import Category, Product
 
@@ -12,3 +13,10 @@ class ProductAdmin(admin.ModelAdmin):
     list_filter = ('is_active', 'category')
     search_fields = ('name', 'description')
     list_editable = ('price', 'count', 'is_active') 
+"""
+    
+from django.contrib import admin
+from .models import Category, Product
+
+admin.site.register(Category)
+admin.site.register(Product)
